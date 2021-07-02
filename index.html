@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>contact form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="contact form, js validation"/>
+	<link rel="SHORTCUT ICON" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ </head>
+ <body>
+	<main class="main">
+		<div class="gray col-sm-12 col-md-10 ml-auto mr-auto">
+			<div class="gray col-sm-11 col-md-10 ml-auto mr-auto">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 col-md-9">
+							<nav class="navbar navbar-expand-md bg-light">
+								<ul class="navbar-nav w-100 nav-justified">
+									<li class="nav-item">
+										<a class="nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
+									</li>
+									<li class="nav-item">
+										<span class="step"><a class="nav-link" href="#">Contact Info</a></span>
+									</li>
+									<li class="nav-item">
+										<span class="step"><a class="nav-link" href="#">Quantity</a></span>
+									</li>
+									<li class="nav-item">
+										<span class="step"><a class="nav-link" href="#">Price</a></span>
+									</li>
+									<li class="nav-item">
+										<span class="step"><a class="nav-link" href="#">Done</a></span>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 col-md-10">
+							<form name="contactForm" id="regForm" onclick="return validateForm2()" 
+								action="" 
+								autocomplete="off" method="post">
+								<div class="tab">
+									<h1>Contact Info</h1>
+									<div class="form-group row">
+										<label for="name" class="col-md-4">Name</label>
+											<div class="col-md-8">
+												<input type="text" name="name" class="form-control" id="name"
+													title = "поле має містити від 3 до 20 букв" required>
+													<div class="error" id="nameErr"></div>
+											</div>
+									</div>
+									<div class="form-group row">
+										<label for="email" class="col-md-4">Email<sup>&nbsp;required</sup></label>
+										<div class="col-md-8">
+											<input type="text" name="email" class="form-control" id="email"
+												title = "введіть коректний Email" required>
+												<div class="error" id="emailErr"></div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="phone" class="col-md-4">Phone</label>
+										<div class="col-md-8">
+											<input type="text" name="mobile" class="form-control col-12" id="mobile"
+												title = "поле має містити від 3 до 10 цифр" required>
+												<div class="error" id="mobileErr"></div>
+										</div>
+									</div>
+								</div>
+								<div class="tab">
+									<h2>Quantity</h2>
+									<div class="form-group row">
+										<label for="QuantityNumber" class="col-md-4">Quantity<sup>&nbsp;required</sup></label>
+											<div class="col-md-8">
+												<input type="text" name="QuantityNumber" id="QuantityNumber"
+													onchange="myFunctionQuantityNumber();" class="form-control" 
+													placeholder="ваша очікувана ціна від $1 до $1 000 000"
+													pattern="[0-9]{1,6}" title = "ціна має бути в діапазоні 1 до 1 000 000 одиниць" required>	
+										</div>
+									</div>
+								</div>
+								<div class="tab">
+									<h2>Price</h2>
+									<p id="pG">&#36;</p>
+								</div>
+								<div class="tab">
+									<h2>Done</h2>
+									<p><img id="imgValid" src="img/valid-png-01.png" alt="valid img"/>
+										Your email was send successfully!</p>
+								</div>
+								<div style="overflow:auto;">
+									<div class="butt1">
+										<button type="button" class="btn btn-primary btnY" id="prevBtn"
+											onclick="nextPrev(-1)">Continue</button>
+										<button type="button" class="btn btn-primary btnW" id="nextBtn" 
+											onclick="nextPrev(1)">&nbsp;&larr;&nbsp;Back&nbsp;</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-8 ml-auto mr-auto">
+					<h3>title site</h3>
+					<p>This is the description</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+		<script type="text/javascript" src="js/script.js"></script>
+ </body>
+</html>
